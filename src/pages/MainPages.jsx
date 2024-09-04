@@ -13,7 +13,7 @@ const MainPages = () => {
       x: () => gsap.utils.random(-200, 200),
       scale: () => gsap.utils.random(0, 1),
       opacity: 0,
-      duration: 1,
+      duration: 0.5,
       ease: "power1.inOut",
       stagger: {
         from: "random"
@@ -24,24 +24,28 @@ const MainPages = () => {
   useEffect(() => {
     if (theme) {
       gsap.to('#lightTheme', {
-       opacity: 1,
-       duration: 0.5, 
+       width: "10000px",
+       height: "10000px",
+       duration: 1, 
+       ease: "power2.inOut"
       });
     } else {
       gsap.to('#lightTheme', { 
-        opacity: 0,
+        width: "1px",
+        height: "1px",
         duration: 0.5, 
+        ease: "power1.Out"
       });
     }
   }, [theme]);
 
   return (
     <>
-      <div id='lightTheme' className='fixed z-50 w-screen h-screen backdrop-invert pointer-events-none'></div>
+      <div id='lightTheme' className='fixed z-50 backdrop-invert pointer-events-none rounded-full'></div>
       <div id='grid-parent' className="w-[90%] h-[95%] bg-black">
           <div className={`h-full grid grid-rows-9 grid-cols-9 gap-2 *:rounded-lg`}>
-              <div id='children' className={`col-start-2 col-end-7 flex items-center`}>
-                <button onClick={() => setTheme(!theme)} className="bg-slate-200 rounded-full rounded-br-none text-2xl p-[2%]">
+              <div id='children' className={`bg-gradient col-start-2 col-end-7 flex items-center`}>
+                <button onClick={() => setTheme(!theme)} className="bg-slate-200 rounded-full rounded-br-sm text-2xl p-[2%]">
                   {
                     theme ? <RiMoonClearFill /> : <HiSun />
                   }
