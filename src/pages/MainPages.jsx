@@ -34,7 +34,7 @@ const MainPages = () => {
         width: "1px",
         height: "1px",
         duration: 0.5, 
-        ease: "power1.Out"
+        ease: "power2.out"
       });
     }
   }, [theme]);
@@ -43,8 +43,8 @@ const MainPages = () => {
     <>
       <div id='lightTheme' className='fixed z-50 backdrop-invert pointer-events-none rounded-full'></div>
       <div id='grid-parent' className="w-[90%] h-[95%] bg-black">
-          <div className={`h-full grid grid-rows-9 grid-cols-9 gap-2 *:rounded-lg`}>
-              <div id='children' className={`bg-gradient col-start-2 col-end-7 flex items-center`}>
+          <div className={`h-full grid grid-rows-9 grid-cols-9 gap-2 *:rounded-lg *:flex *:items-center *:justify-center`}>
+              <div id='children' className={`bg-gradient col-start-2 col-end-7 flex !justify-start`}>
                 <button onClick={() => setTheme(!theme)} className="bg-slate-200 rounded-full rounded-br-sm text-2xl p-[2%]">
                   {
                     theme ? <RiMoonClearFill /> : <HiSun />
