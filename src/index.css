@@ -4,7 +4,36 @@
 @tailwind components;
 @tailwind utilities;
 
-.bg-gradient {
-    background: rgb(0,0,0);
-    background: linear-gradient(41deg, rgba(0,0,0,1) 47%, rgba(226,232,240,1) 100%);
+body {
+  @apply text-[#F4DFC8];
+}
+
+.menu-btn {
+  @apply relative bg-[#0B60B0] 
+  h-10 w-24 
+  rounded-full 
+  overflow-hidden
+  cursor-pointer;
+
+  .slider {
+    @apply relative w-full h-full;
+
+    .el {
+      @apply h-full w-full flex justify-center items-center;
+
+      &:nth-of-type(2) {
+        @apply absolute bg-[#40a2d8] top-full
+      }
+    }
+  }
+
+  .perspectiveLabel {
+    @apply h-full w-full flex justify-center items-center;
+
+    p {
+      &:nth-of-type(2) {
+        @apply absolute;
+      }
+    }
+  }
 }
