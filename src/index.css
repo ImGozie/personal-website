@@ -9,7 +9,7 @@ body {
 }
 
 .menu-btn {
-  @apply relative bg-[#0B60B0] 
+  @apply relative
   h-10 w-24 
   rounded-full 
   overflow-hidden
@@ -19,37 +19,40 @@ body {
     @apply relative w-full h-full;
 
     .el {
-      @apply h-full w-full;
+      @apply h-full w-full bg-[#0B60B0];
 
       &:nth-of-type(2) {
-        @apply absolute bg-[#40a2d8] top-full
+        @apply absolute !bg-[#40a2d8] top-full;
       }
       &:hover {
         .perspectiveLabel {
-            transform: rotateX(90deg)
-            
-            p {
-                &:nth-of-type(1) {
-                    transform: translateY(-100%);
-                    opacity: 0;
-                }
-                &:nth-of-type(2) {
-                    opacity: 1;
-                }
+          transform: rotateX(90deg);
+
+          p {
+            &:nth-of-type(1) {
+              transform: translateY(-100%);
+              opacity: 0;
             }
+            &:nth-of-type(2) {
+              opacity: 1;
+            }
+          }
         }
       }
     }
   }
 
   .perspectiveLabel {
-    @apply h-full w-full flex justify-center items-center duration-300;
+    @apply h-full w-full flex justify-center items-center duration-500;
     transform-style: preserve-3d;
 
     p {
+      @apply duration-500;
+    
       &:nth-of-type(2) {
         position: absolute;
-        transform: rotateX(-90deg)
+        transform: rotateX(-90deg) translateY(10px);
+        transform-origin: bottom center;
         opacity: 0;
       }
     }
