@@ -5,25 +5,28 @@
 @tailwind utilities;
 
 body {
-  @apply text-[#F4DFC8];
+  @apply select-none text-[#F4DFC8];
 }
 
 .header {
   @apply fixed 
   flex justify-between items-center 
   w-full
-  border-2 
   text-gray-50 
   px-28 py-6;
 
   .menu {
-    @apply w-[480px] h-[650px] bg-[#F7E987] rounded-3xl absolute top-6 right-28;
+    @apply w-[480px] h-[650px] 
+    bg-[#F7E987] rounded-3xl 
+    absolute 
+    /* top-[calc(1.5rem-5px)] right-[calc(10%-5px)] */
+    ;
   }
 }
 
 .menu-btn {
   @apply relative
-  h-10 w-24 
+  h-10 w-24
   rounded-full 
   overflow-hidden
   cursor-pointer;
