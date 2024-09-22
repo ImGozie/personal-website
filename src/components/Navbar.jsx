@@ -5,9 +5,13 @@ const Navbar = () => {
   const [isActive, setActive] = useState(false);
 
   return (
-    <header className="fixed flex justify-between items-center w-full text-gray-50 px-28 py-6">
+    <header className="header">
       <h1>example</h1>
-      <Button isActive={isActive} setActive={setActive} />
+      <div className="">
+        <div className="menu">
+        </div>
+        <Button isActive={isActive} setActive={setActive} />
+      </div>
     </header>
   );
 };

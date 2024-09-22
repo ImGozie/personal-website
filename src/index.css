@@ -8,6 +8,19 @@ body {
   @apply text-[#F4DFC8];
 }
 
+.header {
+  @apply fixed 
+  flex justify-between items-center 
+  w-full
+  border-2 
+  text-gray-50 
+  px-28 py-6;
+
+  .menu {
+    @apply w-[480px] h-[650px] bg-[#F7E987] rounded-3xl absolute top-6 right-28;
+  }
+}
+
 .menu-btn {
   @apply relative
   h-10 w-24 
@@ -19,10 +32,10 @@ body {
     @apply relative w-full h-full;
 
     .el {
-      @apply h-full w-full bg-[#0B60B0];
+      @apply h-full w-full bg-[#F7E987] text-black;
 
       &:nth-of-type(2) {
-        @apply absolute !bg-[#40a2d8] top-full;
+        @apply absolute !bg-black !text-[#F4DFC8] top-full;
       }
       &:hover {
         .perspectiveLabel {
@@ -34,7 +47,7 @@ body {
               opacity: 0;
             }
             &:nth-of-type(2) {
-              opacity: 1;
+                @apply opacity-100
             }
           }
         }
