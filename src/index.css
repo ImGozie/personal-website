@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 body {
-  @apply select-none text-[#F4DFC8];
+  @apply select-none bg-black text-[#F4DFC8] mt-[50vh] mb-[100vh];
 }
 
 .header {
@@ -13,7 +13,7 @@ body {
   flex justify-between items-center 
   w-full
   text-gray-50 
-  px-28 py-6;
+  px-[10%] py-6;
 
   .menu {
     @apply w-[480px] h-[650px] 

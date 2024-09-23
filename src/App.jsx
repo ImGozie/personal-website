@@ -1,18 +1,27 @@
-import Navbar from "./components/Navbar"
-import MainPages from "./pages/MainPages"
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
+import ScrollManager from "./lib/ScrollManager";
+import React, { useEffect } from "react";
+import Lenis from "@studio-freight/lenis";
 
 function App() {
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    const raf = (time) => {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    };
+    requestAnimationFrame(raf);
+  }, []);
   return (
     <>
-      <Navbar />
-      <MainPages />
-      {/* <div className="flex items-center justify-center bg-black h-screen">
-      </div> */}
-      <div className="bg-blue-500 w-full h-screen">
-
-      </div>
+      {/* <ScrollManager> */}
+        {/* <Navbar /> */}
+        <Hero />
+      {/* </ScrollManager> */}
     </>
-  )
+  );
 }
 
-export default App
+export default App;

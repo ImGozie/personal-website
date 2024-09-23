@@ -7,13 +7,13 @@ const variants = {
     width: 480,
     height: 650,
     top: "1rem",
-    right: "6.5rem",
+    right: "10%",
   },
   closed: {
     width: 100,
     height: 40,
     top: "1.5rem",
-    right: "7rem",
+    right: "10%",
   }
 }
 
