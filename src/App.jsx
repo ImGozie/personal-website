@@ -1,26 +1,27 @@
+import { useEffect, useRef } from "react";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
-import ScrollManager from "./lib/ScrollManager";
-import React, { useEffect } from "react";
-import Lenis from "@studio-freight/lenis";
+import LocomotiveScroll from "locomotive-scroll";
 
 function App() {
-  useEffect(() => {
-    const lenis = new Lenis();
+  const containerRef = useRef(null);
 
-    const raf = (time) => {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
+  useEffect(() => {
+    const scroll = new LocomotiveScroll({
+      el: containerRef.current,
+      smooth: true,
+    });
+    console.log("Locomotive Scroll initialized:", scroll);
+    return () => {
+      scroll.destroy();
     };
-    requestAnimationFrame(raf);
   }, []);
+
   return (
-    <>
-      {/* <ScrollManager> */}
-        {/* <Navbar /> */}
-        <Hero />
-      {/* </ScrollManager> */}
-    </>
+    <main data-scroll-container ref={containerRef}>
+      {/* <Navbar /> */}
+      <Hero />
+    </main>
   );
 }
 
