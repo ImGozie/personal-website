@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 body {
-  @apply select-none bg-black text-[#F4DFC8] mt-[50vh] mb-[100vh];
+  @apply select-none bg-black text-[#F4DFC8] mb-[100vh];
 }
 
 .header {
