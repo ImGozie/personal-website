@@ -1,18 +1,17 @@
-import React, { useEffect } from "react";
-import Lenis from "@studio-freight/lenis";
+import { ReactLenis } from "@studio-freight/react-lenis";
 
-const ScrollManager = ({ children }) => {
-  useEffect(() => {
-    const lenis = new Lenis();
+function ScrollManager({ children }) {
+  const lenisOptions = {
+    lerp: 0.5,
+    duration: 1,
+    smoothTouch: false,
+    smooth: true,
+  };
 
-    const raf = (time) => {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    };
-    requestAnimationFrame(raf);
-  }, []);
-
-  return <>{children}</>;
-};
-
+  return (
+    <ReactLenis root options={lenisOptions}>
+      {children}
+    </ReactLenis>
+  );
+}
 export default ScrollManager;
