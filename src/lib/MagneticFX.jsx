@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export default function Framer({children}) {
     const ref = useRef(null);
-    const [position, setPosition] = useState({x:0,y:0});
+    const [position, setPosition] = useState({ x:0, y:0 });
 
     const handleMouse = (e) => {
         const { clientX, clientY } = e;
