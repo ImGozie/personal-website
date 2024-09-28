@@ -16,8 +16,9 @@ body {
   @apply xl:max-w-[1280px] w-full
 }
 
-.menu-parrent::after {
-  @apply absolute -top-1 w-full h-full hover:scale-[3] border-2;
+.bounds::before {
+  @apply absolute top-0 w-full h-full hover:scale-[3];
   pointer-events: all;
   content: "";
+  cursor: grab;
 }
