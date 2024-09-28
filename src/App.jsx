@@ -1,17 +1,19 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Cursor from "./components/Cursor";
 
 function App() {
+  const stickyEl = useRef(null);
+
   return (
-    <>
-      <Cursor />
-      <div className={`flexCenter bg-blue-400`}>
-        <Navbar />
+    <main>
+      <Cursor stickyEl={stickyEl} />
+      <div className={`flexCenter`}>
+        <Navbar ref={stickyEl} />
       </div>
       <Hero />
-    </>
+    </main>
   );
 }
 
