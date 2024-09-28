@@ -1,39 +1,14 @@
 import React, { useState } from "react";
-import Button from "./Button";
-import { motion } from "framer-motion";
-
-const variants = {
-  open: {
-    width: 480,
-    height: 650,
-    top: "1rem",
-    right: "10%",
-  },
-  closed: {
-    width: 100,
-    height: 40,
-    top: "1.5rem",
-    right: "10%",
-  }
-}
+import MenuButton from "./MenuButton";
 
 const Navbar = () => {
-  const [isActive, setActive] = useState(false);
-
+  const [isOpen, setOpen] = useState(false);
   return (
-    <header className="header">
-      <h1>example</h1>
-      <div className="">
-        <motion.div 
-          className="menu"
-          variants={variants}
-          animate={isActive ? "open" : "closed"}
-          initial="closed"
-          transition={{ duration: 0.75, ease: [0.76, 0, 0.24, 1] }} 
-        >
-        </motion.div>
-        <Button isActive={isActive} setActive={setActive} />
-      </div>
+    <header className="fixed top-0 boxWidth z-10">
+      <nav className="w-full flex items-center justify-between sm:px-16 px-6 py-4">
+        <h1 className="uppercase">example</h1>
+        <MenuButton isOpen={isOpen} setOpen={setOpen} />
+      </nav>
     </header>
   );
 };
