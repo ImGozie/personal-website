@@ -8,7 +8,7 @@ const Navbar = forwardRef(function Navbar(props, ref) {
     <header className="fixed top-0 boxWidth z-10">
       <nav className="w-full flex items-center justify-between sm:px-16 px-6 py-4">
         <h1 className="uppercase">example</h1>
-        <div ref={ref} className="group relative cursor-pointer menu-parrent">
+        <div ref={ref} className="relative cursor-pointer menu-parrent">
           <Hamburger
             easing="ease-out"
             size={20}
