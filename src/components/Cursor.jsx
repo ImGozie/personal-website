@@ -32,9 +32,14 @@ const Cursor = ({ stickyEl }) => {
       y: top + height / 2
     }
 
+    const distance = {
+      x: clientX - center.x,
+      y: clientY - center.y
+    }
+
     if(isHovered) {
-      koordinat.x.set(center.x - cursorSize / 2);
-      koordinat.y.set(center.y - cursorSize / 2);
+      koordinat.x.set((center.x - cursorSize / 2) + distance.x * 0.1);
+      koordinat.y.set((center.y - cursorSize / 2) + distance.y * 0.1);
     } else {
       koordinat.x.set(clientX - cursorSize / 2);
       koordinat.y.set(clientY - cursorSize / 2);
