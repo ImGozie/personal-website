@@ -8,69 +8,10 @@ body {
   @apply select-none bg-black text-[#F4DFC8] mb-[100vh];
 }
 
-.header {
-  @apply fixed 
-  flex justify-between items-center 
-  w-full
-  text-gray-50 
-  px-[10%] py-6;
-
-  .menu {
-    @apply w-[480px] h-[650px] 
-    bg-[#F7E987] rounded-3xl 
-    absolute 
-    /* top-[calc(1.5rem-5px)] right-[calc(10%-5px)] */
-    ;
-  }
+.flexCenter {
+  @apply flex justify-center items-center
 }
 
-.menu-btn {
-  @apply relative
-  h-10 w-24
-  rounded-full 
-  overflow-hidden
-  cursor-pointer;
-
-  .slider {
-    @apply relative w-full h-full;
-
-    .el {
-      @apply h-full w-full bg-[#F7E987] text-black;
-
-      &:nth-of-type(2) {
-        @apply absolute !bg-black !text-[#F4DFC8] top-full;
-      }
-      &:hover {
-        .perspectiveLabel {
-          transform: rotateX(90deg);
-
-          p {
-            &:nth-of-type(1) {
-              transform: translateY(-100%);
-              opacity: 0;
-            }
-            &:nth-of-type(2) {
-                @apply opacity-100
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .perspectiveLabel {
-    @apply h-full w-full flex justify-center items-center duration-500;
-    transform-style: preserve-3d;
-
-    p {
-      @apply duration-500;
-    
-      &:nth-of-type(2) {
-        position: absolute;
-        transform: rotateX(-90deg) translateY(10px);
-        transform-origin: bottom center;
-        opacity: 0;
-      }
-    }
-  }
+.boxWidth {
+  @apply xl:max-w-[1280px] w-full
 }
