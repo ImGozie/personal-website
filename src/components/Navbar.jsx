@@ -20,7 +20,7 @@ const Navbar = forwardRef(function Navbar(props, ref) {
             />
           </div>
         </Magnetic>
-        
+        <div className="menu absolute top-0 left-0 bg-slate-400 h-[50vh] w-full"></div>
       </nav>
     </header>
   );
