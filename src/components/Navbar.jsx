@@ -20,6 +20,7 @@ const Navbar = forwardRef(function Navbar(props, ref) {
             />
           </div>
         </Magnetic>
+        
       </nav>
     </header>
   );
