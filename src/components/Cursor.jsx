@@ -54,12 +54,12 @@ const Cursor = ({ stickyEl }) => {
     };
 
     if (isHovered) {
-      rotate(distance);
-      const stretcher = Math.max(Math.abs(distance.x), Math.abs(distance.y));
-      const newScaleX = transform(stretcher, [0, width / 2], [1, 1.3]);
-      const newScaleY = transform(stretcher, [0, height / 2], [1, 0.8]);
-      scale.x.set(newScaleX);
-      scale.y.set(newScaleY);
+      // rotate(distance);
+      // const stretcher = Math.max(Math.abs(distance.x), Math.abs(distance.y));
+      // const newScaleX = transform(stretcher, [0, width / 2], [1, 1.3]);
+      // const newScaleY = transform(stretcher, [0, height / 2], [1, 0.8]);
+      // scale.x.set(newScaleX);
+      // scale.y.set(newScaleY);
 
       koordinat.x.set(center.x - cursorSize / 2 + distance.x * 0.1);
       koordinat.y.set(center.y - cursorSize / 2 + distance.y * 0.1);
@@ -102,20 +102,20 @@ const Cursor = ({ stickyEl }) => {
     };
   }, [cursorSize]);
 
-  const template = ({ rotate, scaleX, scaleY }) => {
-    return `rotate(${rotate}) scale(${scaleX}, ${scaleY})`;
-  };
+  // const template = ({ rotate, scaleX, scaleY }) => {
+  //   return `rotate(${rotate}) scale(${scaleX}, ${scaleY})`;
+  // };
 
   return (
     <motion.div
-      transformTemplate={template}
+      // transformTemplate={template}
       ref={cursorRef}
       className="z-30 h-10 w-10 rounded-[50%] fixed pointer-events-none mix-blend-difference bg-[#F4DFC8]"
       style={{
         left: smoothMovement.x,
         top: smoothMovement.y,
-        scaleX: scale.x,
-        scaleY: scale.y,
+        // scaleX: scale.x,
+        // scaleY: scale.y,
       }}
       animate={{ width: cursorSize, height: cursorSize }}
     ></motion.div>
