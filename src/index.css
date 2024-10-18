@@ -1,24 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  @apply select-none bg-black text-[#F4DFC8] mb-[100vh];
+  @apply select-none bg-black text-[#F0EDCF] mb-[100vh];
 }
 
 .flexCenter {
-  @apply flex justify-center items-center
+  @apply flex justify-center items-center;
 }
 
 .flexStarts {
-  @apply flex justify-center items-start
+  @apply flex justify-center items-start;
 }
 
 .boxWidth {
-  @apply xl:max-w-[1280px] w-full
+  @apply xl:max-w-[1280px] w-full;
 }
 
 .bounds::before {
@@ -30,5 +31,17 @@ body {
 
 .paragraph {
   font-family: "Inter", sans-serif;
-  @apply text-5xl font-semibold text-center md:max-w-[640px]
+  @apply text-5xl font-semibold text-center md:max-w-[640px];
+
+  span {
+    font-family: "Playfair Display", serif;
+  }
+
+  .span-decoration {
+    @apply text-[#0F1230] relative
+  }
+
+  .span-decoration:after {
+    @apply w-56 h-16 bottom-[-5px] right-[320px] -z-10 bg-[#F0EDCF] -skew-y-3  absolute content-[""]
+  }
 }
