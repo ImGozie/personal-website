@@ -12,7 +12,9 @@ function App() {
       <div className={`flexCenter`}>
         <Navbar ref={stickyEl} />
       </div>
-      <Hero />
+      <div className={`flexStarts`}>
+        <Hero />
+      </div>
     </main>
   );
 }
