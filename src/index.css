@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -12,6 +13,10 @@ body {
   @apply flex justify-center items-center
 }
 
+.flexStarts {
+  @apply flex justify-center items-start
+}
+
 .boxWidth {
   @apply xl:max-w-[1280px] w-full
 }
@@ -21,4 +26,9 @@ body {
   pointer-events: all;
   content: "";
   cursor: grab;
+}
+
+.paragraph {
+  font-family: "Inter", sans-serif;
+  @apply text-5xl font-semibold text-center md:max-w-[640px]
 }
