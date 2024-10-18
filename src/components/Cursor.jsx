@@ -110,7 +110,7 @@ const Cursor = ({ stickyEl }) => {
     <motion.div
       // transformTemplate={template}
       ref={cursorRef}
-      className="z-30 h-10 w-10 rounded-[50%] fixed pointer-events-none mix-blend-difference bg-[#F4DFC8]"
+      className="z-30 h-10 w-10 rounded-[50%] fixed pointer-events-none mix-blend-difference bg-[#F0EDCF]"
       style={{
         left: smoothMovement.x,
         top: smoothMovement.y,
